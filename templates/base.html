@@ -1,0 +1,62 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/google.html" as google %}
+
+{% block head %}
+
+    <!-- super() is required to preserve the original content defined in base templates -->
+    {{ super() }}
+
+    <!-- Main Stylesheet -->
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/stylesheet.css', _external=True) }}">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/font-awesome.min.css', _external=True) }}">
+
+{% endblock %}
+
+{% block navbar %}
+    <div class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Navbar</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">My Portfolio</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url_for('bio') }}">Bio</a></li>
+                    <li><a href={{ url_for('current_projects') }}>Current Projects</a></li>
+                    <li><a href={{ url_for('past_projects') }}>Past Projects</a></li>
+                    <li><a href={{ url_for('contact') }}>Contact</a></li>
+                    <li><a class="fa fa-github fa-2x" aria-hidden="true" href="https://github.com/Daniel-Alderman77"></a></li>
+                    <li><a class="fa fa-linkedin fa-2x" aria-hidden="true" href="https://www.linkedin.com/in/daniel-alderman-85123bb4?trk=hp-identity-name"></a></li>
+                    <li><a class="fa fa-twitter-square fa-2x" aria-hidden="true" href="https://twitter.com/danaldermania"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        {% block page_content %}{% endblock %}
+    </div>
+
+    <hr>
+
+    <div class="footer">
+        <div class="container footer_container">
+            <p class="footer_copy">&copy; Daniel Alderman</p>
+            <a class="footer_back_to_top" href="#">Back to top</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    {{super()}}
+    {{google.uanalytics('UA-81670445-1')}}
+{% endblock %}

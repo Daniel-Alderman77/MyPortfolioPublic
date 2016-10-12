@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Bio{% endblock %}
+
+{% block page_content %}
+    <h2>Bio</h2>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">About</h3>
+        </div>
+        <div class="panel-body">
+            <img src="{{ url_for('static',filename='img/bio-pic.jpg', _external=True) }}" class="img-responsive pull-right image-padding" alt="Photo of me!">
+
+            <p>I am an avid music fan, I regularly attend gigs and attend a festival every summer. For me music is a great
+                release and some of my fondest memories are of seeing bands with my friends. Me and a friend from school
+                are currently in the process of composing and recording our first demos, in which I write and sing lyrics.</p>
+
+            <p>I like to train to regularly at my local gym with my long term goal to compete in half marathon.</p>
+
+            <p>I am avid reader, particularly of fantasy and horror novels. Some of favourite include J. R. R. Tolkien,
+                Stephen King and George R. R. Martin.</p>
+
+            <p>I also like to play video games in my free time. Especially strategy games, such as the “Company of Heroes”
+                and the “Civilization” series. I enjoy the puzzle solving, historical context and the critical thinking
+                skills related to these games, as well as sense of achievement when outsmarting an AI or human opponent.</p>
+
+        </div>
+    </div>
+
+    <a type="button" class="btn btn-default btn-lg" href={{ url_for('download_cv') }}>
+        Download CV <span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span>
+    </a>
+
+{% endblock %}

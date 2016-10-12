@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block head %}
+
+    <!-- super() is required to preserve the original content defined in base templates -->
+    {{ super() }}
+
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/stylesheet.css', _external=True) }}">
+
+{% endblock %}
+
+{% block title %}Contact Me{% endblock %}
+
+{% block page_content %}
+    <h2>Contact Me</h2>
+
+    {% if success %}
+        <p>Thank you for your message. I'll get back to you shortly.</p>
+
+    {% else %}
+
+        {% for message in form.name.errors %}
+            <div class="flash">{{ message }}</div>
+        {% endfor %}
+
+        {% for message in form.email.errors %}
+            <div class="flash">{{ message }}</div>
+        {% endfor %}
+
+        {% for message in form.subject.errors %}
+            <div class="flash">{{ message }}</div>
+        {% endfor %}
+
+        {% for message in form.message.errors %}
+            <div class="flash">{{ message }}</div>
+        {% endfor %}
+
+        <form action="{{ url_for('contact') }}" method=post>
+            {{ form.hidden_tag() }}
+
+            {{ form.name.label }}
+            {{ form.name }}
+
+            {{ form.email.label }}
+            {{ form.email }}
+
+            {{ form.subject.label }}
+            {{ form.subject }}
+
+            {{ form.message.label }}
+            {{ form.message }}
+
+            {{ form.submit }}
+        </form>
+
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% block title %}Current Projects{% endblock %}
+
+{% block page_content %}
+    <h2>Current Projects</h2>
+
+    <div id="fyp" class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Final Year Project - Rendering Interactive Visualization in Real-time based on data derived from a Cloud Datacentre</h3>
+        </div>
+        <div class="panel-body">
+            <img src="{{ url_for('static',filename='img/fyp-screenshot.png', _external=True) }}" class="img-responsive pull-right image-padding" alt="Final Year Project Screenshot">
+
+            <p>For my Final Year Project I am creating a piece of exploratory software that generates bespoke interactive
+                visualizations that displays information in real-time. The software aims to be able to process data is
+                derived from a distributed system. This makes the data difficult to process due to the volume of the data,
+                the velocity in which the data is sent, the heterogeneous in nature of the data and acceptable latency
+                in relation to rendering the visualization to the user. Although I have regular meetings with my
+                supervisor, the work is largely independent therefore requires good time management and planning
+                skills.</p>
+
+            <p>Utilised Technology: Python, Flask, REST</p>
+
+            <p>Skills Demonstrated: Project planning, teamwork, interface design, testing, software engineering.</p>
+
+        </div>
+
+    </div>
+
+    <div id="arduino-weather-station" class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Arduino Weather Station</h3>
+        </div>
+        <div class="panel-body">
+            <img src="{{ url_for('static',filename='img/arduino.png', _external=True) }}" class="img-responsive pull-right image-padding" alt="IMAGE ALT TAG">
+
+            <p>The aim of this project to use sensors connected on the Arduino to predict the weather. A combination of
+                temperature and humidity sensors pass the data through serial communcation where it is deserialized. The
+                weather is then computed on a Raspberry Pi before being posted to Twitter.</p>
+
+            <p>Utilised Technology: C++, Python, Arduino, Raspberry Pi.</p>
+
+            <p>Skills Demonstrated: Project planning, electronics, invoking web services.</p>
+
+        </div>
+
+        <div class="panel-footer"><a href="https://github.com/Daniel-Alderman77/ArduinoWeatherStation"> View on Github</a></div>
+    </div>
+
+    <div id="mega-project-list" class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Mega Project List</h3>
+        </div>
+        <div class="panel-body">
+            <img src="{{ url_for('static',filename='img/mega-project-screenshot.png', _external=True) }}" class="img-responsive pull-right image-padding" alt="GeneratePi Screenshot">
+
+            <p>The Mega Project List is a compilied set of tasks that help improve ones' programming ability. These tasks
+                vary from linear algebra to networking. My aim is to complete as many of these as possible in Python over
+                time.</p>
+
+            <p>Utilised Technology: Python</p>
+
+            <p>Skills Demonstrated: Project planning</p>
+
+        </div>
+
+        <div class="panel-footer"><a href="https://github.com/Daniel-Alderman77/Mega-Project-List-Python"> View on Github</a></div>
+    </div>
+
+    <div id="delete-generated-youtube-tweets" class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Delete Generated Youtube Tweets</h3>
+        </div>
+        <div class="panel-body">
+            <img src="{{ url_for('static',filename='img/twitter-logo.png', _external=True) }}" class="img-responsive pull-right image-padding" alt="IMAGE ALT TAG">
+
+            <p>When linking social media accounts to websites such as Youtube, these websites will often tweet on the
+                users behalf. If the user would like to disable this functioanlity the process of deleting these tweets
+                can be quite time consuming. This project aims to delete tweets generated tweets, with the possiblity of
+                extending this functionality to other sites in the future. My main goal with project is to gain a better
+                understanding of Twitter's RESTful API's for the process of data mining and content generation.</p>
+
+            <p>Utilised Technology: Python, Rest</p>
+
+            <p>Skills Demonstrated: Project planning, invoking web services.</p>
+
+        </div>
+
+        <div class="panel-footer"><a href="https://github.com/Daniel-Alderman77/Delete-Generated-Youtube-Tweets"> View on Github</a></div>
+    </div>
+
+
+{% endblock %}

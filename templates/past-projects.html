@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% block title %}Past Projects{% endblock %}
+
+{% block page_content %}
+    <h2>Past Projects</h2>
+
+    <div id="orienteer" class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Orienteer</h3>
+        </div>
+        <div class="panel-body">
+            <img src="{{ url_for('static',filename='img/weather-screenshot.png', _external=True) }}" class="img-responsive pull-right image-padding" alt="Weather view screenshot">
+
+            <p>Orienteer was created in a group project as part of my degree. It is designed to help the user navigate
+                the great outdoors. The compass view shows the direction of magnetic north, with the latitude
+                and the longitude. The map view has uses Apple's Maps API to drop a pin to display the user current
+                location map with a pin. The weather view displays information about the weather,
+                such as temperature, wind speed, wind direction and the time for sunrise and sunset. It gets
+                queries data from openweathermap.org's REST API and utilising the user's coordinates to provide
+                wather information for their location.</p>
+
+            <p>Utilised Technology: Swift, REST, Apple Maps.</p>
+
+            <p>Skills Demonstrated: Teamwork, project planning, interface design, pair programming, invoking web services.</p>
+
+        </div>
+
+        <div id="my-portfolio" class="panel-footer"><a href="https://github.com/Daniel-Alderman77/Orienteer"> View on Github</a></div>
+    </div>
+
+    <div id="my-portfolio" class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">My Portfolio</h3>
+        </div>
+        <div class="panel-body">
+            <img src="{{ url_for('static',filename='img/flask-logo.png', _external=True) }}" class="img-responsive pull-right image-padding" alt="Flask logo">
+
+            <p>My Portfolio was built using the Python micro web framework Flask. My design was implement using a
+                combination Bootstrap and CSS3. It makes use of Google Analytics to track user visits and interaction. It
+                has been deployed using Amazon Webservices' (AWS) Elastic Beanstalk to allow server instance to scale
+                as demand increases and decreases.</p>
+
+            <p>Utilised Technology: Python, Flask, AWS, REST, Google Analytics, Bootstrap, Javascript, HTML5, CSS3.</p>
+
+            <p>Skills Demonstrated: Project planning, web design.</p>
+
+        </div>
+
+        <div class="panel-footer"><a href=""> View on Github</a></div>
+    </div>
+
+    <div id="gig-finder" class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Gig Finder</h3>
+        </div>
+        <div class="panel-body">
+            <img src="{{ url_for('static',filename='img/gigfinder-screenshot.png', _external=True) }}" class="img-responsive pull-right image-padding" alt="GigFinder screenshot">
+
+            <p>GigFinder takes the user's Last.fm username then queries the last band this user has listened to then
+                displays the next musical concert that this band is playing. This webapp uses the RESTful APIs provided
+                by Songkick and Last.fm to obtain this information. The webapp is written in Java and utilises JSP to
+                provide a user interface for enter their details and display the results. This webapp is designed to be
+                packaged as a WAR file to be run in Apache Tomcat.</p>
+
+            <p>Utilised Technology: Java, JSP, REST, Apache Tomcat.</p>
+
+            <p>Skills Demonstrated: Project planning, invoking web services.</p>
+
+        </div>
+
+        <div class="panel-footer"><a href="https://github.com/Daniel-Alderman77/GigFinder"> View on Github</a></div>
+    </div>
+
+    <div id="elements" class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Elements</h3>
+        </div>
+        <div class="panel-body">
+            <img src="{{ url_for('static',filename='img/elements-screenshot.png', _external=True) }}" class="img-responsive pull-right image-padding" alt="Elements App Screenshot">
+
+            <p>Elements is Android app that I created as part of my degree. The user selects an element and enters a
+                temperature either in celsius or kelvin. This opens a second view which the describes the state (solid,
+                liquid or gas) that the selected element is at this temperature and displays an image of the element.</p>
+
+            <p>Utilised Technology: Java, Android.</p>
+
+            <p>Skills Demonstrated: Project planning, interface design.</p>
+
+        </div>
+
+        <div class="panel-footer"><a href="https://github.com/Daniel-Alderman77/Elements"> View on Github</a></div>
+    </div>
+
+{% endblock %}
